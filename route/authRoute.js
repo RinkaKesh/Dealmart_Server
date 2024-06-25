@@ -5,6 +5,10 @@ const bcrypt=require("bcrypt")
 const jwt=require('jsonwebtoken')
 require("dotenv").config()
 
+authRoute.get("/",async(req,res)=>{
+    return res.send("hello")
+})
+
 
 authRoute.post("/register",async(req,res)=>{
     try {
