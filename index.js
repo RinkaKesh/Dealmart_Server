@@ -33,7 +33,7 @@ app.get("/",(req,res)=>{
     res.send("hello hi")
 })
 
-app.use("/",authRoute)
+app.use("/user",authRoute)
 const PORT=process.env.PORT||10000
 
 
