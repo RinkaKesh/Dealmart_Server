@@ -29,7 +29,7 @@ const {connection}=require("./config/connection")
 //routes
 const { authRoute } = require("./route/authRoute")
 app.use("/user",authRoute)
-const PORT=process.env.PORT
+const PORT=process.env.PORT||10000
 
 
 
