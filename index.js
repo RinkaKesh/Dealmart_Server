@@ -14,7 +14,7 @@ app.use(cookieParser())
 
 //cors setup
 const corsOption={
-    origin:"https://dealmart-rinkakesh.vercel.app/",
+    origin:"https://dealmart-rinkakesh.vercel.app",
     methods:["GET","POST","PATCH","PUT","DELETE"],
     credentials:true
 }
