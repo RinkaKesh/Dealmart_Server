@@ -13,15 +13,15 @@ app.use(express.json())
 app.use(cookieParser())
 
 //cors setup
-// const corsOption={
-//     origin:"http://localhost:5173/",
-//     methods:'GET,HEAD,POST,PUT,PATCH,DELETE',
-//     credentials:true
-// }
-app.use(cors({
-    origin:"https://dealmart-rinkakesh.vercel.app",
+const corsOption={
+    origin:"*",
+    methods:["GET","POST","PATCH","PUT","DELETE"],
     credentials:true
-}))
+}
+app.options("",cors(corsOption))
+app.use(cors(corsOption))
+
+
 
 //connection
 const {connection}=require("./config/connection")
@@ -34,7 +34,7 @@ app.get("/",(req,res)=>{
 })
 
 app.use("/user",authRoute)
-const PORT=process.env.PORT||10000
+const PORT=process.env.PORT||5000
 
 
 
